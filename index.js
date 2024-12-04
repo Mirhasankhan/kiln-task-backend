@@ -46,7 +46,7 @@ async function run() {
         }
 
         if (search) {
-          query.address = { $regex: search, $options: "i" };
+          query.title = { $regex: search, $options: "i" };
         }
 
         const result = await taskCollection.find(query).toArray();
